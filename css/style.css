@@ -1,3 +1,5 @@
+
+
 body,
 div,
 ul,
@@ -26,7 +28,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #114166;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +36,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #35688F;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,7 +44,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #35688F;
   line-height: 22px;
 }
 
@@ -65,7 +67,7 @@ h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #7CA5C4;
   line-height: 16px;
   float: left;
 }
@@ -73,7 +75,7 @@ h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #7CA5C4;
   line-height: 16px;
   float: right;
 
@@ -81,12 +83,12 @@ h5 {
 
 p {
   font-size: 14px;
-  color: #333;
+  color: #35688F;
   line-height: 21px;
 }
 
 a {
-  color: #1199c3;
+  color: #35688F;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -97,41 +99,50 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  padding: 10px 10px 20px 10px;
+  margin-bottom: 20px;
 }
 
+.major{
+  font-style: italic;
+  color: #35688F;
+}
 #skills-h3 {
-  color: #f5ae23;
-  display: none;
+  color: #114166;
+  display: flex;
+  justify-content: center;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #114166;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #114166;
 }
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
+  background-color: #CCE3DE;
+  padding-bottom: 20px;
   clear:both;
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #6B9080;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #6B9080;
 }
-
+#topContacts{
+  background-color: #CCE3DE;
+}
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -152,6 +163,7 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
+  margin-right: 15px;
   width: 200px;
   display: none;
 }
@@ -161,7 +173,9 @@ img {
 }
 
 span {
-  padding: 5px;
+  padding: 5px 5px 5px 10px;
+  color: #114166;
+  font-size: 1.25em;
 }
 
 #lets-connect {
@@ -209,6 +223,7 @@ span {
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 }
