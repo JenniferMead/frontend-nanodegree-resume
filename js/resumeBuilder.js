@@ -72,8 +72,8 @@ var education = {
 ],
 "onlineCourses":[
 {
-  "title": "Front-End Web-Developer Nanodegree",
   "school": "Udacity",
+  "title": "Front-End Web-Developer Nanodegree",
   "dates": "02/2016 - current",
   "url": "https://www.udacity.com/"
 }
@@ -177,22 +177,24 @@ work.display();
 
 education.display = function (){
 for(school in education.schools){
-  $("#education").append(HTMLschoolStart);
   var formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name);
   var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
   var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
   var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
   var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+  $("#education").append(HTMLschoolStart);
   $(".education-entry:last").append(formattedSchool + formattedLocation + formattedDegree + formattedDates + formattedMajor);
-
 }
 for(course in education.onlineCourses){
-    $("#education").append(HTMLonlineClasses);
     var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-    var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+    var formattedOnlineSchoolTitle = formattedOnlineSchool + formattedOnlineTitle;
     var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
     var formattedOnlineUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-    $(".education-entry:last").append(formattedOnlineSchool + formattedTitle + formattedOnlineDates + formattedOnlineUrl);
+    $("#education").append(HTMLonlineClasses);
+    $("#education").append(HTMLschoolStart);
+    $(".education-entry:last").append(formattedOnlineSchoolTitle);
+      $(".education-entry:last").append(formattedOnlineDates + formattedOnlineUrl);
 }
 }
 
